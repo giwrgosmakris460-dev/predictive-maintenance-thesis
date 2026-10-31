@@ -1,0 +1,216 @@
+{
+  "data_dir": "data",
+  "output_dir": "results_verification_v2",
+  "files": {
+    "train": "train_FD001.txt",
+    "test": "test_FD001.txt",
+    "rul": "RUL_FD001.txt"
+  },
+  "strict_fd001": true,
+  "seed": 42,
+  "rul_cap": 125,
+  "cv_folds": 5,
+  "threads": 1,
+  "timing_repeats": 5,
+  "importance_repeats": 3,
+  "importance_max_rows": 500,
+  "robustness_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "perturbation_rates": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "block_sensor": "s2",
+  "block_length": 5,
+  "configurations": [
+    {
+      "name": "raw_scaled",
+      "window": 0,
+      "scale": true,
+      "k": "all"
+    },
+    {
+      "name": "raw_unscaled",
+      "window": 0,
+      "scale": false,
+      "k": "all"
+    },
+    {
+      "name": "temporal5",
+      "window": 5,
+      "scale": true,
+      "k": "all"
+    },
+    {
+      "name": "temporal10",
+      "window": 10,
+      "scale": true,
+      "k": "all"
+    },
+    {
+      "name": "temporal5_top10",
+      "window": 5,
+      "scale": true,
+      "k": 10
+    },
+    {
+      "name": "temporal5_top20",
+      "window": 5,
+      "scale": true,
+      "k": 20
+    },
+    {
+      "name": "temporal10_top10",
+      "window": 10,
+      "scale": true,
+      "k": 10
+    },
+    {
+      "name": "temporal10_top20",
+      "window": 10,
+      "scale": true,
+      "k": 20
+    }
+  ],
+  "grids": {
+    "Ridge": {
+      "alpha": [
+        1.0,
+        10.0,
+        100.0
+      ]
+    },
+    "RandomForest": {
+      "n_estimators": [
+        100,
+        200
+      ],
+      "max_depth": [
+        10,
+        null
+      ],
+      "min_samples_leaf": [
+        2
+      ]
+    },
+    "XGBoost": {
+      "n_estimators": [
+        100,
+        200
+      ],
+      "max_depth": [
+        3,
+        5
+      ],
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "subsample": [
+        1.0
+      ],
+      "colsample_bytree": [
+        1.0
+      ]
+    },
+    "SVR": {
+      "C": [
+        10.0,
+        100.0
+      ],
+      "gamma": [
+        "scale",
+        0.01
+      ],
+      "epsilon": [
+        0.1,
+        1.0
+      ]
+    },
+    "KNN": {
+      "n_neighbors": [
+        5,
+        15,
+        30
+      ],
+      "weights": [
+        "uniform",
+        "distance"
+      ]
+    }
+  },
+  "effective_configurations": [
+    {
+      "name": "raw_scaled",
+      "window": 0,
+      "scale": true,
+      "k": "all"
+    }
+  ],
+  "effective_grids": {
+    "Ridge": {
+      "alpha": [
+        1.0
+      ]
+    },
+    "RandomForest": {
+      "n_estimators": [
+        100
+      ],
+      "max_depth": [
+        10
+      ],
+      "min_samples_leaf": [
+        2
+      ]
+    },
+    "XGBoost": {
+      "n_estimators": [
+        100
+      ],
+      "max_depth": [
+        3
+      ],
+      "learning_rate": [
+        0.05
+      ],
+      "subsample": [
+        1.0
+      ],
+      "colsample_bytree": [
+        1.0
+      ]
+    },
+    "SVR": {
+      "C": [
+        10.0
+      ],
+      "gamma": [
+        "scale"
+      ],
+      "epsilon": [
+        0.1
+      ]
+    },
+    "KNN": {
+      "n_neighbors": [
+        5
+      ],
+      "weights": [
+        "uniform"
+      ]
+    }
+  },
+  "quick_verification": true
+}

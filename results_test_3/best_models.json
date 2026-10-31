@@ -1,0 +1,51 @@
+{
+  "Ridge": {
+    "configuration": "raw_scaled",
+    "parameters": {
+      "model__alpha": 1.0
+    },
+    "selected_by": "mean clipped validation RMSE",
+    "CV_RMSE": 20.941676111742733
+  },
+  "RandomForest": {
+    "configuration": "raw_scaled",
+    "parameters": {
+      "model__max_depth": 10,
+      "model__min_samples_leaf": 2,
+      "model__n_estimators": 100
+    },
+    "selected_by": "mean clipped validation RMSE",
+    "CV_RMSE": 18.72626374847463
+  },
+  "XGBoost": {
+    "configuration": "raw_scaled",
+    "parameters": {
+      "model__colsample_bytree": 1.0,
+      "model__learning_rate": 0.05,
+      "model__max_depth": 3,
+      "model__n_estimators": 100,
+      "model__subsample": 1.0
+    },
+    "selected_by": "mean clipped validation RMSE",
+    "CV_RMSE": 18.854754990195886
+  },
+  "SVR": {
+    "configuration": "raw_scaled",
+    "parameters": {
+      "model__C": 10.0,
+      "model__epsilon": 0.1,
+      "model__gamma": "scale"
+    },
+    "selected_by": "mean clipped validation RMSE",
+    "CV_RMSE": 19.030110864657622
+  },
+  "KNN": {
+    "configuration": "raw_scaled",
+    "parameters": {
+      "model__n_neighbors": 5,
+      "model__weights": "uniform"
+    },
+    "selected_by": "mean clipped validation RMSE",
+    "CV_RMSE": 20.248179112776185
+  }
+}

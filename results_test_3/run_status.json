@@ -1,0 +1,9 @@
+{
+  "completed": true,
+  "quick_verification": true,
+  "dataset": "NASA C-MAPSS FD001",
+  "validation_unit": "engine",
+  "validation_scoring": "all cycles of held-out engines; equal-weight fold means",
+  "test_scoring": "one endpoint per engine; capped RUL",
+  "maritime_validation_performed": false
+}

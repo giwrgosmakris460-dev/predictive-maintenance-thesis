@@ -1,0 +1,1 @@
+NASA FD001 quick verification only. One raw_scaled configuration and one parameter candidate per algorithm. All 100 test engines, 5 grouped CV folds, 10 robustness seeds and 5 timing repetitions were used. These results are not the full grid/feature-ablation study. See the main README and config_used.json.

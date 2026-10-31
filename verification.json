@@ -1,0 +1,32 @@
+{
+  "protocol_unit_tests": 7,
+  "protocol_unit_tests_passed": 7,
+  "integration_fixture": {
+    "completed": true,
+    "models": 5,
+    "configurations": 8,
+    "comparison_modes": [
+      "fixed",
+      "retuned"
+    ],
+    "ablation_rows": 80,
+    "synthetic_fixture_for_software_testing_only": true
+  },
+  "full_grid_on_NASA_FD001_executed": false,
+  "verification_command": "python run_experiment.py --quick --output results_verification_v2",
+  "saved_model_reload_and_endpoint_inference_passed": true,
+  "NASA_FD001_quick_verification": {
+    "completed": true,
+    "train_engines": 100,
+    "test_engines": 100,
+    "train_rows": 20631,
+    "test_rows": 13096,
+    "CV_folds": 5,
+    "model_count": 5,
+    "predictions": 500,
+    "robustness_trials": 350,
+    "timing_repetitions_per_model_phase": 5,
+    "selected_configuration": "raw_scaled",
+    "full_grid_executed": false
+  }
+}

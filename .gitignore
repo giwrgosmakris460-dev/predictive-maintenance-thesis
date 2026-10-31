@@ -1,0 +1,25 @@
+# Python temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# VS Code settings
+.vscode/
+
+# Datasets & Heavy Files
+*.csv
+*.zip
+*.h5
+*.pkl
+*.parquet
+
+# Logs & Outputs
+logs/
+results/
+*.log
